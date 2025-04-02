@@ -15,7 +15,9 @@
 - **测试**：JUnit、Spring Boot Test
 - **容器化**：Docker
 
-## 项目结构bank-transaction/
+## 项目主要代码结构bank-transaction/(实际以项目为准)
+
+```angular2html
 ├── src
 │   ├── main
 │   │   ├── java
@@ -46,6 +48,7 @@
 │       │                   └── TransactionIntegrationTest.java
 └── pom.xml
 └── README.md
+```
 ## 外部库说明
 - `spring-boot-starter-web`：用于构建 RESTful API，处理 HTTP 请求和响应。
 - `spring-boot-starter-cache`：用于实现缓存机制。
