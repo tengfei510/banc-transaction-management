@@ -89,13 +89,14 @@
                         <id>default</id>
                         <goals>
                             <goal>build</goal>
-<!--                            <goal>push</goal>-->
+                            <goal>push</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>your-docker-repository/${project.artifactId}</repository>
+                    <repository>registry.cn-hangzhou.aliyuncs.com/shitengfei_test/bank-transaction-management</repository>
                     <tag>${project.version}</tag>
+                    <goal>push</goal>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>

@@ -56,14 +56,44 @@
 - `spring-boot-starter-test`：用于编写和运行单元测试和集成测试。
 
 ## 运行项目
+
 ### 1. 克隆项目git clone https://github.com/your-repo/bank-transaction.git
 cd bank-transaction
 ### 2. 构建项目mvn clean package
 ### 3. 运行项目java -jar target/bank-transaction-0.0.1-SNAPSHOT.jar
 ### 4. 运行测试mvn test（待验证）
-### 5. 构建 Docker 镜像mvn clean package dockerfile:build
-### 6. 运行 Docker 容器docker run -p 8080:8080 your-docker-repository/bank-transaction:0.0.1-SNAPSHOT
-docker   镜像地址
+### 5. 构建 Docker 镜像mvn clean package  dockerfile:build dockerfile:push  -DskipTests
+// docker 镜像源配置
+```json
+
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "registry-mirrors": [
+    "https://yck71rkr.mirror.aliyuncs.com",
+    "https://docker.m.daocloud.io/",
+    "https://huecker.io/",
+    "https://dockerhub.timeweb.cloud",
+    "https://noohub.ru/",
+    "https://dockerproxy.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://docker.nju.edu.cn",
+    "https://xx4bwyg2.mirror.aliyuncs.com",
+    "http://f1361db2.m.daocloud.io",
+    "https://registry.docker-cn.com",
+    "http://hub-mirror.c.163.com",
+    "https://docker.mirrors.ustc.edu.cn"
+  ]
+}
+```
+### 6. 运行 Docker 容器docker run registry.cn-hangzhou.aliyuncs.com/shitengfei_test/bank-transaction-management:0.0.1-SNAPSHOT
+![img_1.png](img_1.png)
+
 ## API 文档
 ### 创建交易
 - **URL**：`POST /api/transactions`
