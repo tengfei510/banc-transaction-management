@@ -63,6 +63,7 @@ cd bank-transaction
 ### 4. 运行测试mvn test（待验证）
 ### 5. 构建 Docker 镜像mvn clean package dockerfile:build
 ### 6. 运行 Docker 容器docker run -p 8080:8080 your-docker-repository/bank-transaction:0.0.1-SNAPSHOT
+docker   镜像地址
 ## API 文档
 ### 创建交易
 - **URL**：`POST /api/transactions`
