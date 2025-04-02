@@ -59,10 +59,18 @@
 
 ### 1. 克隆项目git clone https://github.com/your-repo/bank-transaction.git
 cd bank-transaction
-### 2. 构建项目mvn clean package
-### 3. 运行项目java -jar target/bank-transaction-0.0.1-SNAPSHOT.jar
+### 2. 构建项目
+```mvn clean package
+```
+### 3. 运行项目
+```
+java -jar target/bank-transaction-0.0.1-SNAPSHOT.jar
+```
 ### 4. 运行测试mvn test（待验证）
-### 5. 构建 Docker 镜像mvn clean package  dockerfile:build dockerfile:push  -DskipTests
+### 5. 构建 Docker 镜像
+```
+mvn clean package  dockerfile:build dockerfile:push  -DskipTests
+```
 // docker 镜像源配置
 ```json
 
