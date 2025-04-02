@@ -60,7 +60,8 @@
 ### 1. 克隆项目git clone https://github.com/your-repo/bank-transaction.git
 cd bank-transaction
 ### 2. 构建项目
-```mvn clean package
+```
+mvn clean package
 ```
 ### 3. 运行项目
 ```
