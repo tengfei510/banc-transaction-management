@@ -15,8 +15,8 @@
 - **测试**：JUnit、Spring Boot Test
 - **容器化**：Docker
 
-## 项目主要代码结构bank-transaction/(实际以项目为准)
-
+## 项目主要代码结构bank-transaction/
+初步设计，实际以项目为准，未更新
 ```angular2html
 ├── src
 │   ├── main
