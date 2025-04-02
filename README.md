@@ -93,6 +93,7 @@ cd bank-transaction
 ```
 ### 6. 运行 Docker 容器docker run registry.cn-hangzhou.aliyuncs.com/shitengfei_test/bank-transaction-management:0.0.1-SNAPSHOT
 ![img_1.png](img_1.png)
+### 7. k8s 运行创建deployment `kubectl create -f k8s/deployment.yaml` 创建service `kubectl create -f k8s/service.yaml`
 
 ## API 文档
 ### 创建交易
